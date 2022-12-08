@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>KAS AUTO</title>
+    <meta name="viewport" content="width=auto, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    
+
+    <div class="topnav">
+        <a class="active" href="index.html">Home</a>
+        <a href="tipe.html">Tipe</a>
+        <a href="contact.html">Contact</a>
+    </div>
+
+    <div style="padding-left:16px">
+        <br><br>
+        <h1 class="h1-index">KAS AUTO</h1>
+        <br><br>
+        <div class="slideshow-container">
+
+            <div class="mySlides fade">
+                <div class="numbertext">1 / 12</div>
+                <img class="img-index" src="gambar/pajero.png" style="width:100%">
+                <div class="text">Pajero Sport (SUV)</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">2 / 12</div>
+                <img class="img-index" src="gambar/fortuner.webp" style="width:100%">
+                <div class="text">Fortuner (SUV)</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">3 / 12</div>
+                <img class="img-index" src="gambar/rush.jpeg" style="width:100%">
+                <div class="text">Rush (SUV)</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">4 / 12</div>
+                <img class="img-index" src="gambar/ford.webp" style="width:100%">
+                <div class="text">FORD (SUV)</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">5 / 12</div>
+                <img class="img-index" src="gambar/ertiga.jpg" style="width:100%">
+                <div class="text">Ertiga (MPV)</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">6 / 12</div>
+                <img class="img-index" src="gambar/avanza.jpg" style="width:100%">
+                <div class="text">Avanza (MPV)</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">7 / 12</div>
+                <img class="img-index" src="gambar/xpander.jpg" style="width:100%">
+                <div class="text">Xpander (MPV)</div>
+            </div>
+            <div class="mySlides fade">
+                <div class="numbertext">8 / 12</div>
+                <img class="img-index" src="gambar/alphard.jpg" style="width:100%">
+                <div class="text">Alphard (MPV)</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">9 / 12</div>
+                <img class="img-index" src="gambar/bmw.jpg" style="width:100%">
+                <div class="text">BMW (Sedan)</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">10 / 12</div>
+                <img class="img-index" src="gambar/civic.jpg" style="width:100%">
+                <div class="text">Civic (Sedan)</div>
+            </div>
+            <div class="mySlides fade">
+                <div class="numbertext">11 / 12</div>
+                <img class="img-index" src="gambar/camry.jpg" style="width:100%">
+                <div class="text">Camry (Sedan)</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">12 / 12</div>
+                <img class="img-index" src="gambar/gtr.jpg" style="width:100%">
+                <div class="text">GTR R35 (Sedan)</div>
+            </div>
+
+            <a class="prev" onclick="plusSlides(-1)">❮</a>
+            <a class="next" onclick="plusSlides(1)">❯</a>
+
+        </div>
+        <br>
+
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+            <span class="dot" onclick="currentSlide(5)"></span>
+            <span class="dot" onclick="currentSlide(6)"></span>
+            <span class="dot" onclick="currentSlide(7)"></span>
+            <span class="dot" onclick="currentSlide(8)"></span>
+            <span class="dot" onclick="currentSlide(9)"></span>
+            <span class="dot" onclick="currentSlide(10)"></span>
+            <span class="dot" onclick="currentSlide(11)"></span>
+            <span class="dot" onclick="currentSlide(12)"></span>
+        </div>
+
+        <script>
+            let slideIndex = 1;
+            showSlides(slideIndex);
+
+            function plusSlides(n) {
+                showSlides(slideIndex += n);
+            }
+
+            function currentSlide(n) {
+                showSlides(slideIndex = n);
+            }
+
+            function showSlides(n) {
+                let i;
+                let slides = document.getElementsByClassName("mySlides");
+                let dots = document.getElementsByClassName("dot");
+                if (n > slides.length) { slideIndex = 1 }
+                if (n < 1) { slideIndex = slides.length }
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                }
+                slides[slideIndex - 1].style.display = "block";
+                dots[slideIndex - 1].className += " active";
+            }
+        </script>
+    </div>
+
+</body>
+
+
+</html>
